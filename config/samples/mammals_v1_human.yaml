@@ -1,0 +1,9 @@
+apiVersion: mammals.example.com/v1
+kind: Human
+metadata:
+  name: harry
+spec:
+  hands: 2
+  legs: 2
+  mothertongue: English
+  tail: 0
