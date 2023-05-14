@@ -29,11 +29,11 @@ func PodForHuman(human *mammalsv1.Human, scheme *runtime.Scheme, log logr.Logger
 		Spec: corev1.PodSpec{
 			Containers: []corev1.Container{
 				{
-					Name:  "default",
-					Image: "busybox",
+					Name:    "default",
+					Image:   "busybox",
+					Command: []string{"sh", "-c"},
 					Args: []string{
-						"echo",
-						fmt.Sprintf("%q", message),
+						fmt.Sprintf("echo %s && sleep 3600", message),
 					},
 				},
 			},
