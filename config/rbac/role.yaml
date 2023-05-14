@@ -11,6 +11,9 @@ rules:
   - pods
   verbs:
   - create
+  - get
+  - list
+  - watch
 - apiGroups:
   - mammals.example.com
   resources:
